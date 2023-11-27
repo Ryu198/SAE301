@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+$background-color: #f4f4f4;
+$primary-color: #0E273B;
+$secondary-color: #0E7399;
+$text-color: #333;
+$border-color: #ccc;
+$font-stack: 'Open Sans', sans-serif;
+
+body {
+    
+  background-color: #F4F4F4;
+  font-family: "Open Sans", sans-serif;
+}
+
+.login-container{
+    text-align: center;
+}
+
+.formulaire a{
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    border-color: black;
+}
+
+.submit {
+    width: 80px;
+    padding: 10px 0;
+    background: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: $secondary-color;
+    }
+}
+
+.formulaire{
+    padding-top: 100px;
+    font-size: 20px;
+}
+
+label{
+    margin-bottom: 50px;
+}

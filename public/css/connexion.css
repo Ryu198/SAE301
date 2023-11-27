@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+body {
+  background-color: #F4F4F4;
+  font-family: "Open Sans", sans-serif;
+}
+
+.login-container {
+  text-align: center;
+}
+
+.formulaire a {
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  border-color: black;
+}
+
+.submit {
+  width: 80px;
+  padding: 10px 0;
+  background: #0E273B;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.submit:hover {
+  background: #0E7399;
+}
+
+.formulaire {
+  padding-top: 100px;
+  font-size: 20px;
+}
+
+label {
+  margin-bottom: 50px;
+}
+
+/*# sourceMappingURL=connexion.css.map */

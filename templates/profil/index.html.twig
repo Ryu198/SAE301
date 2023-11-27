@@ -1,0 +1,153 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/profil.css') }}">
+{% endblock %}
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+    <div class="profile-page">
+        <section class="profile-header">
+            <img src="{{ asset('path/to/user/profile/image.jpg') }}" alt="Photo de profil"><br>
+            <h2>Nom Prénom</h2>
+            <span>Étudiant en XXX</span>
+            <span>TP X</span>
+        </section>
+
+        <section class="assignments">
+            <div class="published-assignments">
+                <h3>Devoirs Publiés :</h3>
+                <!-- Répétez cette structure pour chaque devoir publié -->
+                <div class="assignment">
+                    <span>WR000 - Matière</span><br>
+                    <span>Podcast</span><br>
+                    <button class="button-profil" href="{{ path('app_modifier') }}">Modifier</button>
+                </div>
+                <div class="assignment">
+                    <span>WR000 - Matière</span><br>
+                    <span>Site web</span>
+                    <span>12/02</span><br>
+                    <button class="button-profil" href="{{ path('app_modifier') }}">Modifier</button>
+                </div>
+                <button class="button-profil" href="{{ path('app_publier') }}">Publier</button>
+            </div>
+
+            <div class="ongoing-assignments">
+                <h3>Devoirs en cours :</h3>
+                <!-- Répétez cette structure pour chaque devoir en cours -->
+                <div class="assignment">
+                    <span>WR000 - Matière</span><br>
+                    <span>Site web</span>
+                    <span>12/02</span><br>
+                    <button class="button-profil" href="{{ path('app_modifier') }}">Modifier</button>
+                </div>
+                <div class="assignment">
+                    <span>WR000 - Matière</span><br>
+                    <span>Site web</span>
+                    <span>12/02</span><br>
+                    <button class="button-profil" href="{{ path('app_modifier') }}">Modifier</button>
+                </div>
+                <div class="assignment">
+                    <span>WR000 - Matière</span><br>
+                    <span>Site web</span>
+                    <span>12/02</span><br>
+                    <button class="button-profil" href="{{ path('app_modifier') }}">Modifier</button>
+                </div>
+            </div>
+
+            <div class="completed-assignments">
+                <h3>Devoirs terminés :</h3>
+                <!-- Répétez cette structure pour chaque devoir terminé -->
+                <div class="assignment">
+                    <span>WR000 - Matière</span><br>
+                    <span>Podcast</span><br>
+                    <button class="button-profil">Supprimer</button>
+                </div>
+                <div class="assignment">
+                    <span>WR000 - Matière</span><br>
+                    <span>Podcast</span><br>
+                    <button class="button-profil">Supprimer</button>
+                </div>
+                <div class="assignment">
+                    <span>WR000 - Matière</span><br>
+                    <span>Podcast</span><br>
+                    <button class="button-profil">Supprimer</button>
+                </div>
+                <div class="assignment">
+                    <span>WR000 - Matière</span><br>
+                    <span>Podcast</span><br>
+                    <button class="button-profil">Supprimer</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="personal-info">
+            <h3>Informations personnelles :</h3>
+            <form>
+                <!-- Utilisez les informations de l'utilisateur pour pré-remplir les champs -->
+                <div class="form-group">
+                    <label for="photo">Photo actuelle</label>
+                    <img src="{{ asset('path/to/user/profile/image.jpg') }}" alt="Photo de profil"><br></br>
+                    <button class="button-profil">Changer de photo de profil</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" value="Doe">
+                </div>
+                <div class="form-group">
+                    <label for="nom">Prénom :</label>
+                    <input type="text" id="nom" name="nom" value="John">
+                </div>
+                <div class="form-group">
+                    <label for="formation">Formation :</label>
+                    <select id="formation" name="formation" required>
+                        <option value="">Sélectionnez votre formation</option>
+                        <option value="butinfo">BUT informatique</option>
+                        <option value="butmmi">BUT MMI</option>
+                        <option value="butgea">BUT GEA</option>
+                        <option value="bts">BTS</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="annee_etude">Année d'étude :</label>
+                    <select id="annee_etude" name="annee_etude" required>
+                        <option value="">Sélectionnez l'année d'étude</option>
+                        <option value="premiere">Première année</option>
+                        <option value="deuxieme">Deuxième année</option>
+                        <option value="troisieme">Troisième année</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nom">Adresse mail :</label>
+                    <input type="text" id="nom" name="nom" value="john.doe@mailnt.no">
+                </div>
+                <div class="form-group">
+                    <label for="nom">Identifiant :</label>
+                    <input type="text" id="nom" name="nom" value="mmi22z39">
+                </div>
+                <div class="form-group">
+                    <label for="groupe">Votre groupe :</label>
+                    <select id="groupe" name="groupe" required>
+                        <option value="">Sélectionnez votre groupe</option>
+                        <option value="tpa">TPA</option>
+                        <option value="tpb">TPB</option>
+                        <option value="tpc">TPC</option>
+                        <option value="tpd">TPD</option>
+                        <option value="tpe">TPE</option>
+                        <option value="tpf">TPF</option>
+                        <option value="tpg">TPG</option>
+                        <option value="tph">TPH</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nom">Mot de passe :</label>
+                    <input type="text" id="nom" name="nom" value="*********">
+                </div>
+            </form>
+        </section>
+
+        <section class="actions">
+            <button class="button-profil" type="submit">Enregistrer les modifications</button>
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+body {
+  background-color: #F4F4F4;
+  font-family: "Open Sans", sans-serif;
+}
+
+.profile-page {
+  padding-bottom: 20px;
+}
+
+.titre {
+  color: #0E273B;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.assignment {
+  background-color: #0E273B;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(14, 39, 59, 0.1);
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.actions {
+  padding-left: 50%;
+}
+
+.profile-header, .assignment, .form-group {
+  text-align: center;
+}
+
+.button-profil {
+  width: 50%;
+  padding: 10px 0;
+  background: #0E273B;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.button-profil:hover {
+  background: #0E7399;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: #F4F4F4;
+    font-family: "Open Sans", sans-serif;
+  }
+  .assignment {
+    background-color: #0E273B;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(14, 39, 59, 0.1);
+    margin: 0.5rem;
+    padding: 2rem;
+    width: 60%;
+  }
+}
+
+
+/*# sourceMappingURL=profil.css.map */

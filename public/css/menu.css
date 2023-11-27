@@ -1,0 +1,43 @@
+/*Imports*/
+@import "https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand:wght@500&family=Rubik:wght@700&display=swap";
+/*Variables*/
+/*Mixins*/
+/*Styles*/
+.logo {
+  max-width: 120px;
+}
+
+.navbar, .offcanvas-body, .offcanvas-header, .nav_footer {
+  background-color: #0e273b;
+}
+
+.offcanvas-header {
+  padding-top: 35px;
+}
+
+.nav-item img {
+  margin-right: 15px;
+}
+
+.navbar a, .navbar p {
+  color: white;
+}
+
+.nav_profil_container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 5px;
+}
+
+.container-fluid {
+  justify-content: space-around;
+}
+
+.nav_footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=menu.css.map */

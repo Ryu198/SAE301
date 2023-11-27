@@ -1,0 +1,30 @@
+{
+    "assignment_type": "rendusae",
+    "subject": "WS301",
+    "title": "SAE301",
+    "start_date": "2023-11-21",
+    "due_date": "2023-12-03",
+    "due_time": "23:59",
+    "description": "zerfegfdh",
+    "file_paths": []
+}
+{
+    "assignment_type": "rendusae",
+    "subject": "WS301",
+    "title": "efrgt",
+    "start_date": "2023-11-25",
+    "due_date": "2023-11-12",
+    "due_time": "23:59",
+    "description": "sfdghj,j;nk,:l!",
+    "file_paths": []
+}
+{
+    "assignment_type": "exercice",
+    "subject": "FDBVFG",
+    "title": "FBGB",
+    "start_date": "0051-06-05",
+    "due_date": "1505-04-20",
+    "due_time": "06:02",
+    "description": "BFGB",
+    "file_paths": []
+}

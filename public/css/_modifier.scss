@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+// Variables
+$background-color: #f4f4f4;
+$primary-color: #0E273B;
+$secondary-color: #0E7399;
+$text-color: #333;
+$border-color: #ccc;
+$font-stack: 'Open Sans', sans-serif;
+
+// Base styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  background: $background-color;
+}
+
+.publish-assignment-container {
+  width: 100%;
+  max-width: 600px; // Adjust to match the design
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: $text-color;
+    }
+
+    input[type='text'],
+    input[type='date'],
+    input[type='time'],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+    }
+
+    input[type='file'] {
+      display: none;
+    }
+
+    label[for='file_upload'] {
+      display: block;
+      background: $secondary-color;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+
+  button[type='submit'] {
+    width: 100%;
+    padding: 10px 0;
+    background: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: $secondary-color;
+    }
+  }
+}
+
+// Media query for desktop
+@media (min-width: 768px) {
+  .publish-assignment-container {
+    align-items: center;
+    margin-left: 320px;
+    max-width: 1100px;
+
+    .form-group {
+      display: flex;
+      flex-wrap: row wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      label, input, select, textarea, button[type='submit'] {
+        flex: 1;
+        margin-left: 10px;
+      }
+
+      label {
+        flex: 0 0 auto;
+      }
+
+      // Last item in the form group should not have margin-right
+      :last-child {
+        margin-right: 0;
+      }
+    }
+
+    // Specific styles for form controls
+    select,
+    input[type='text'],
+    input[type='date'],
+    input[type='time'] {
+      margin-bottom: 0; // Remove margin bottom in horizontal layout
+    }
+
+    // Adjusting textarea and file input for full width in a flex container
+    textarea,
+    label[for='file_upload'],
+    button[type='submit'] {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+
+    // Custom file input label should align with other inputs
+    label[for='file_upload'] {
+      margin-top: 10px;
+    }
+
+    // Submit button adjustment
+    button[type='submit'] {
+      margin-top: 20px; // Add some space above the submit button
+      margin-left: 10px;
+    }
+  }
+}

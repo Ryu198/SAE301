@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.publish-assignment-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.publish-assignment-container h1 {
+  color: #0E273B;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.publish-assignment-container .form-group {
+  margin-bottom: 15px;
+}
+.publish-assignment-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.publish-assignment-container .form-group input[type=text],
+.publish-assignment-container .form-group input[type=date],
+.publish-assignment-container .form-group input[type=time],
+.publish-assignment-container .form-group select,
+.publish-assignment-container .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.publish-assignment-container .form-group input[type=file] {
+  display: none;
+}
+.publish-assignment-container .form-group label[for=file_upload] {
+  display: block;
+  background: #0E7399;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.publish-assignment-container button[type=submit] {
+  width: 100%;
+  padding: 10px 0;
+  background: #0E273B;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.publish-assignment-container button[type=submit]:hover {
+  background: #0E7399;
+}
+
+@media (min-width: 768px) {
+  .publish-assignment-container {
+    align-items: center;
+    margin-left: 320px;
+    max-width: 1100px;
+  }
+  .publish-assignment-container .form-group {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .publish-assignment-container .form-group label, .publish-assignment-container .form-group input, .publish-assignment-container .form-group select, .publish-assignment-container .form-group textarea, .publish-assignment-container .form-group button[type=submit] {
+    flex: 1;
+    margin-left: 10px;
+  }
+  .publish-assignment-container .form-group label {
+    flex: 0 0 auto;
+  }
+  .publish-assignment-container .form-group :last-child {
+    margin-right: 0;
+  }
+  .publish-assignment-container select,
+  .publish-assignment-container input[type=text],
+  .publish-assignment-container input[type=date],
+  .publish-assignment-container input[type=time] {
+    margin-bottom: 0;
+  }
+  .publish-assignment-container textarea,
+  .publish-assignment-container label[for=file_upload],
+  .publish-assignment-container button[type=submit] {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+  .publish-assignment-container label[for=file_upload] {
+    margin-top: 10px;
+  }
+  .publish-assignment-container button[type=submit] {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+}
+
+/*# sourceMappingURL=modifier.css.map */

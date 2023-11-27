@@ -1,0 +1,26 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/connexion.css') }}" />
+{% endblock %}
+{% block body %}
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <div class="formulaire">
+        <form method="post" action="{{ path('app_accueil') }}">
+
+            <label for="email">Adresse mail :</label><br>
+            <input type="text" id="email" name="_email"  required autofocus><br>
+
+            <label for="password">Mot de passe :</label><br>
+            <input type="password" id="password" name="_password" required><br>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            <a href="{{ path('app_inscription') }}">S'inscrire</a><br>
+            <button class="submit" type="submit">Se connecter</button><br>
+        </div>
+    </div>
+{% endblock %}
+

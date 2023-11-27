@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Agenda{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/agenda.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <h1 class="titre">Agenda</h1>
+    <div class="agenda-container">
+            <div class="task-details">
+                <h3>WR310 - Culture artistique</h3>
+                <p>Rendu : Packaging</p>
+                <p>Date de début : 10/09/2023</p>
+                <p>Date et heure de rendu : 06/10/2023 à 23:59</p>
+            </div>
+            <div class="task-actions">
+                <a class="info-button" href="{{ path('app_agenda') }}">En savoir plus</a>
+                <button class="menu-button">⋮</button>
+            </div>
+    </div>
+    <div class="agenda-container">
+            <div class="task-details">
+                <h3>WR303 - UX Design d'expérience</h3>
+                <p>Rendu : Persona + Wireframe</p>
+                <p>Date de début : 20/09/2023</p>
+                <p>Date et heure de rendu : 07/10/2023 à 23:59</p>
+            </div>
+            <div class="task-actions">
+                <a class="info-button" href="{{ path('app_agenda') }}">En savoir plus</a>
+                <button class="menu-button">⋮</button>
+            </div>
+    </div>
+    <div class="agenda-container">
+            <div class="task-details">
+                <h3>WR313 - Développement Back</h3>
+                <p>Exercice : Finir exercice I - J</p>
+                <p>Date de début : 05/10/2023</p>
+                <p>Date et heure de rendu : 07/10/2023 à 23:59</p>
+            </div>
+            <div class="task-actions">
+                <a class="info-button" href="{{ path('app_agenda') }}">En savoir plus</a>
+                <button class="menu-button">⋮</button>
+            </div>
+    </div>
+    <div class="agenda-container">
+            <div class="task-details">
+                <h3>WR309 - UI Création et design...</h3>
+                <p>Rendu : Charte graphique</p>
+                <p>Date de début : 15/09/2023</p>
+                <p>Date et heure de rendu : 08/10/2023 à 23:59</p>
+            </div>
+            <div class="task-actions">
+                <a class="info-button" href="{{ path('app_agenda') }}">En savoir plus</a>
+                <button class="menu-button">⋮</button>
+            </div>
+    </div>
+    <div class="agenda-container">
+            <div class="task-details">
+                <h3>WR312 - Intégration web</h3>
+                <p>Rendu : Intégration Figma</p>
+                <p>Date de début : 25/09/2023</p>
+                <p>Date et heure de rendu : 08/10/2023 à 23:59</p>
+            </div>
+            <div class="task-actions">
+                <a class="info-button" href="{{ path('app_agenda') }}">En savoir plus</a>
+                <button class="menu-button">⋮</button>
+            </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/accueil.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="main-container">
+        <div class="container content-area">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Recherchez une tâche" aria-label="Recherchez une tâche">
+                <button type="submit" id="searchButton">Rechercher</button>
+            </div>
+
+
+            <!-- Weekly Report -->
+            <div class="weekly-report-card">
+                <div class="card-header">
+                    <img src="{{ asset('path/to/your/icon.png') }}" alt="Rapport Icone" class="report-icon">
+                    <h2>Rapport hebdomadaire</h2>
+                </div>
+                <div class="card-content">
+                    <div class="graph-placeholder">
+                        <!-- Vous intégrerez ici le graphique avec une librairie ou une image -->
+                    </div>
+                    <div class="task-summary">
+                        <span>3 Tâches</span>
+                        <span>Les 7 prochain jours</span>
+                    </div>
+                    <button class="see-more-button">Voir plus</button>
+                </div>
+            </div>
+
+            <!-- Tasks for Today -->
+            <div class="task-block">
+                <div class="task-date">
+                    <span>Aujourd'hui</span>
+                    <span>22 Nov.</span>
+                </div>
+                <div class="task-details">
+                    <h3>WR313 - Développement Back</h3>
+                    <p>Exercice : Finir exercice I - J </p>
+                    <p>Date de début : 05/10/2023</p>
+                    <p>Date et heure de rendu : 07/10/2023 à 23:59</p>
+                </div>
+                <div class="task-actions">
+                    <a class="info-button" href="{{ path('app_agenda') }}">En savoir plus</a>
+                    <button class="menu-button">⋮</button>
+                </div>
+                <div class="task-footer">
+                    <button class="see-more-button">Voir plus</button>
+                    <button class="add-task-button">+ Tâche</button>
+                </div>
+            </div>
+
+            <!-- Tasks for Tomorrow -->
+            <div class="task-block">
+                <div class="task-date">
+                    <span>Demain</span>
+                    <span>22 Nov.</span>
+                </div>
+                <div class="task-details">
+                    <h3>WR313 - Développement Back</h3>
+                    <p>Exercice : Finir exercice I - J </p>
+                    <p>Date de début : 05/10/2023</p>
+                    <p>Date et heure de rendu : 07/10/2023 à 23:59</p>
+                </div>
+                <div class="task-actions">
+                    <a class="info-button" href="{{ path('app_agenda') }}">En savoir plus</a>
+                    <button class="menu-button">⋮</button>
+                </div>
+                <div class="task-footer">
+                    <button class="see-more-button">Voir plus</button>
+                    <button class="add-task-button">+ Tâche</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
