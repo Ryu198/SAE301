@@ -1,0 +1,47 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+/*Variables*/
+$couleur1: white;
+$couleur2: #0e273b;
+$couleur3:#0e7399;
+$couleur4:#eee;
+
+$font-stack: 'Open Sans', sans-serif;
+
+/*Mixins*/
+@mixin background-color($color) {
+  background-color: $color;
+}
+
+@mixin font-style($font, $size) {
+  font-family: $font;
+  font-size: $size;
+}
+
+/*Styles*/
+
+body {
+  background: $couleur1;
+  font-family: $font-stack;
+}
+
+.container-connexion {
+    max-width: 700px;
+  }
+
+.btn-primary {
+  @include background-color($couleur2);
+  border-color: $couleur2;
+  &:hover {
+    @include background-color($couleur3);
+  }
+}
+
+.container-inscription, .container-connexion {
+  margin-top: 50px;
+  @include background-color($couleur4);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 900px;
+}

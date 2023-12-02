@@ -1,0 +1,31 @@
+/*Imports*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+/*Variables*/
+/*Mixins*/
+/*Styles*/
+body {
+  background: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container-connexion {
+  max-width: 700px;
+}
+
+.btn-primary {
+  background-color: #0e273b;
+  border-color: #0e273b;
+}
+.btn-primary:hover {
+  background-color: #0e7399;
+}
+
+.container-inscription, .container-connexion {
+  margin-top: 50px;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 900px;
+}
+
+/*# sourceMappingURL=form.css.map */

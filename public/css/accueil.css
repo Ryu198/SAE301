@@ -1,20 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
-.main-container {
-  padding: 1rem;
+body {
   background-color: #EEEEEE;
 }
-.main-container .content-area {
-  margin-left: 250px;
+
+.form-control {
+  display: flex;
+}
+
+.search-bar input {
+  max-width: 500px;
+}
+
+.main-container {
+  padding: 1rem;
 }
 .main-container .content-area .search-bar {
-  width: 50px;
-  display: flex;
   align-items: left;
   margin-bottom: 1rem;
+  display: flex;
 }
 .main-container .content-area .search-bar input[type=text] {
   flex-grow: 1;
-  padding: 10px 170px;
   border: 1px solid #0E7399;
   border-radius: 20px;
   margin-right: 10px;
@@ -30,7 +36,6 @@
   background-color: #0E7399;
 }
 .main-container .content-area .weekly-report-card {
-  width: 50%;
   background: white;
   border: 1px solid #EEEEEE;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -86,7 +91,6 @@
   border-radius: 8px;
   margin: 1rem 0;
   padding: 1rem;
-  width: 50%;
 }
 .main-container .content-area .task-block .task-date {
   display: flex;

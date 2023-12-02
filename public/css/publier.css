@@ -72,7 +72,6 @@ body {
 @media (min-width: 768px) {
   .publish-assignment-container {
     align-items: center;
-    margin-left: 320px;
     max-width: 1100px;
   }
   .publish-assignment-container .form-group {
