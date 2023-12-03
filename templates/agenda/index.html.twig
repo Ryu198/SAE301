@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Agenda{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/agenda.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <script>
+        $("#colour").change(function(event) {
+            console.log($(this).val());
+            $("#color_front").css('background-color',$(this).val());
+        });
+
+        $("#color_front").click(function(event) {
+            $("#colour").click();
+        });
+    </script>
+    <h1 class="titre">Agenda</h1>
+    <div class="agenda-container">
+            <div class="task-details">
+                <div class="color-input-wrapper">
+                    <input type="color" value="#2ca9ba">
+                </div>
+                <h3>{{ elements[0].titre }}</h3>
+                <p>Matière: {{ elements[0].code }}</p>
+                <p>Type : {{ elements[0].type }}</p>
+                <p>Date de début: {{ elements[0].date_debut }}</p>
+                <p>Date et heure de rendu: {{ elements[0].date_rendu }}</p>
+                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                </div>
+            </div>
+    </div>
+    <div class="agenda-container">
+            <div class="task-details">
+                <div class="color-input-wrapper">
+                    <input type="color" value="#cf94ff">
+                </div>
+                <h3>{{ elements[1].titre }}</h3>
+                <p>Matière: {{ elements[1].code }}</p>
+                <p>Type : {{ elements[1].type }}</p>
+                <p>Date de début: {{ elements[2].date_debut }}</p>
+                <p>Date et heure de rendu: {{ elements[1].date_rendu }}</p>
+                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success" style="width: 80%">80%</div>
+                </div>
+            </div>
+    </div>
+    <div class="agenda-container">
+            <div class="task-details">
+                <div class="color-input-wrapper">
+                    <input type="color" value="#ff4d4d">
+                </div>
+                <h3>{{ elements[2].titre }}</h3>
+                <p>Matière: {{ elements[2].code }}</p>
+                <p>Type : {{ elements[2].type }}</p>
+                <p>Date de début: {{ elements[3].date_debut }}</p>
+                <p>Date et heure de rendu: {{ elements[3].date_rendu }}</p>
+                <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-warning text-dark" style="width: 45%">45%</div>
+                </div>
+            </div>
+    </div>
+    <div class="agenda-container">
+            <div class="task-details">
+                <div class="color-input-wrapper">
+                    <input type="color" value="#6a4dff">
+                </div>
+                <h3>{{ elements[3].titre }}</h3>
+                <p>Matière: {{ elements[3].code }}</p>
+                <p>Type : {{ elements[3].type }}</p>
+                <p>Date de début: {{ elements[3].date_debut }}</p>
+                <p>Date et heure de rendu: {{ elements[3].date_rendu }}</p>
+                <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger" style="width: 0%">0%</div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

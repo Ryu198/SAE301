@@ -1,0 +1,143 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/accueil.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="container main-container">
+        <div class="content-area">
+
+            <div class="row">
+            <div class="col">
+            <!-- Weekly Report -->
+            <div class="weekly-report-card">
+                <div class="card-header">
+                    <img class="graph-icon" src="{{ asset('images/graph.png') }}" alt="Rapport Icone" class="report-icon">
+                    <h2>Rapport hebdomadaire</h2>
+                </div>
+                <hr>
+                <div class="dropstart">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-secondary dropdown-toggle position-relative">
+                        Notification(s)
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                <span class="visually-hidden">unread messages</span>
+                </span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><span class="dropdown-item-text">Rendu à rendre Aujourd'hui à 23:59</span></li>
+                        <li><span class="dropdown-item-text">Exercice à rendre Demain à 23:59</span></li>
+                        <li><span class="dropdown-item-text">Rendu à rendre Dimanche à 23:59</span></li>
+                    </ul>
+                </div>
+                <div>
+                    {% block javascripts %}
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script src="{{ asset('js/script.js') }}"></script>
+                    {% endblock %}
+                    <canvas id="chart-tache"></canvas>
+                </div>
+            </div>
+            </div>
+
+             <div class="col">
+                     <form action="{{ path('recherche_resultat') }}" method="get">
+                         <!-- Filter Checkboxes -->
+                         <div class="filter-checkboxes">
+                             <div class="form-check">
+                             <input id="flexCheckDefault" class="form-check-input" type="checkbox" name="type[]" value="Rendu">
+                             <label class="form-check-label" for="flexCheckDefault">
+                                 Rendu
+                             </label>
+                             </div>
+                             <div class="form-check">
+                                 <input id="flexCheckDefault" class="form-check-input" type="checkbox" name="type[]" value="Rendu">
+                                 <label class="form-check-label" for="flexCheckDefault">
+                                     Exercice
+                                 </label>
+                             </div>
+                             <div class="form-check">
+                                 <input id="flexCheckDefault" class="form-check-input" type="checkbox" name="type[]" value="Rendu">
+                                 <label class="form-check-label" for="flexCheckDefault">
+                                     Partiel
+                                 </label>
+                             </div>
+                             <div class="form-check">
+                                 <input id="flexCheckDefault" class="form-check-input" type="checkbox" name="type[]" value="SAE">
+                                 <label class="form-check-label" for="flexCheckDefault">
+                                     SAE
+                                 </label>
+                             </div>
+                         </div>
+                         <div class="container search-bar">
+                             <input id="searchInput" list="datalistOptions" name="searchText" aria-label="Recherchez une tâche" placeholder="Rercherchez une tâche" type="text" class="form-control"/>
+                             <datalist id="datalistOptions">
+                                 <option value="UI Création et design">
+                                 <option value="Culture artistique">
+                                 <option value="Développement mobile">
+                                 <option value="Gestion de projet">
+                                 <option value="Machine learning">
+                             </datalist>
+                             <button type="submit" id="searchButton">Rechercher</button>
+                         </div>
+                     </form>
+            <!-- Tasks for Today -->
+            <div class="task-block">
+                <div class="task-date">
+                    <span>Aujourd'hui</span>
+                    <span>06 Oct.</span>
+                </div>
+                <div class="task-details">
+                    <div class="alert alert-danger" role="alert">
+                        Attention ! Ce rendu est a rendre aujourd'hui !
+                    </div>
+                    <div class="color-input-wrapper">
+                        <input type="color" value="#2ca9ba">
+                    </div>
+                    <h3>Culture artistique</h3>
+                    <p>Type : Rendu </p>
+                    <p>Date de début : 10/09/2023</p>
+                    <p>Date et heure du rendu : 06/10/2023 à 23:59</p>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                </div>
+                <span class="badge rounded-pill text-bg-success">Success</span>
+                <div class="task-actions">
+                    <a class="info-button" href="{{ path('app_agenda') }}">Voir plus</a>
+                </div>
+            </div>
+
+            <!-- Tasks for Tomorrow -->
+            <div class="task-block">
+                <div class="task-date">
+                    <span>Demain</span>
+                    <span>07 Oct.</span>
+                </div>
+                <div class="task-details">
+                    <div class="alert alert-warning" role="alert">
+                        L'échance de rendu arrive bientôt à son terme !
+                    </div>
+                    <div class="color-input-wrapper">
+                        <input type="color" value="#cf94ff">
+                    </div>
+                    <h3>UX Design d'expérience</h3>
+                    <p>Type : Exercice </p>
+                    <p>Date de début : 20/09/2023</p>
+                    <p>Date et heure du rendu : 07/10/2023 à 23:59</p>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success" style="width: 80%">80%</div>
+                </div>
+                <div class="task-actions">
+                    <a class="info-button" href="{{ path('app_agenda') }}">Voir plus</a>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+{% endblock %}
+

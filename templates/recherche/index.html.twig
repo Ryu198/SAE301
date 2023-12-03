@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Résultats de la recherche{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/recherche.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="container recherche-container">
+        <h1>Résultats de recherche</h1>
+        {% if elements is not empty %}
+            <div class="results">
+                {% for element in elements %}
+                    <div class="element">
+                        <h2>{{ element.titre }}</h2>
+                        <p>Matière: {{ element.code }}</p>
+                        <p>Type : {{ element.type }}</p>
+                        <p>Date de début: {{ element.date_debut }}</p>
+                        <p>Date et heure de rendu: {{ element.date_rendu }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>Aucun résultat trouvé pour votre recherche.</p>
+        {% endif %}
+    </div>
+{% endblock %}
