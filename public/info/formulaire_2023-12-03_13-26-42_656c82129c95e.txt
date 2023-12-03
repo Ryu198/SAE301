@@ -1,0 +1,10 @@
+{
+    "assignment_type": "",
+    "subject": "",
+    "title": "",
+    "start_date": "",
+    "due_date": "",
+    "due_time": "",
+    "description": "",
+    "file_paths": []
+}
