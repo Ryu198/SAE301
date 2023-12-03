@@ -28,3 +28,23 @@
     "description": "BFGB",
     "file_paths": []
 }
+{
+    "assignment_type": "exercice",
+    "subject": "bfbdfb",
+    "title": "bdbdb",
+    "start_date": "0353-05-04",
+    "due_date": "2000-04-21",
+    "due_time": "04:05",
+    "description": "3453",
+    "file_paths": []
+}
+{
+    "assignment_type": "rendu",
+    "subject": "gr",
+    "title": "gerg",
+    "start_date": "2023-10-20",
+    "due_date": "2023-10-21",
+    "due_time": "16:00",
+    "description": "hfgh",
+    "file_paths": []
+}

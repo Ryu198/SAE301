@@ -1,0 +1,10 @@
+{
+    "assignment_type": "exercice",
+    "subject": "TEST",
+    "title": "TEST",
+    "start_date": "2000-07-08",
+    "due_date": "2000-05-04",
+    "due_time": "23:54",
+    "description": "HNG",
+    "file_paths": []
+}

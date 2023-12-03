@@ -45,9 +45,15 @@ body {
   cursor: pointer;
   transition: background 0.3s;
   margin-top: 10px;
+  text-decoration: none;
 }
 .button-profil:hover {
   background: #0E7399;
+  color: white;
+}
+
+.button-container {
+  margin: 20px;
 }
 
 .personal-info {

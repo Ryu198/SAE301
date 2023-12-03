@@ -1,0 +1,10 @@
+{
+    "assignment_type": "exercice",
+    "subject": "FDHD",
+    "title": "GDGD",
+    "start_date": "2000-05-15",
+    "due_date": "2000-05-05",
+    "due_time": "04:05",
+    "description": "DFGF",
+    "file_paths": []
+}

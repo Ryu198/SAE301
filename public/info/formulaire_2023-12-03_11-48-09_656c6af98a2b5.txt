@@ -1,0 +1,10 @@
+{
+    "assignment_type": "rendu",
+    "subject": "vdfvdf",
+    "title": "nfdndfn",
+    "start_date": "2000-02-20",
+    "due_date": "2000-02-02",
+    "due_time": "02:02",
+    "description": "1235453",
+    "file_paths": []
+}

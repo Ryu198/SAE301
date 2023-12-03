@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+.recherche-container {
+  margin-top: 20px;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.results .element {
+  background-color: #0E273B;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.results .element:hover {
+  transform: translateY(-5px);
+}
+.results .element h2 {
+  color: #ccc;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.results .element p {
+  color: #ccc;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+.results .element p::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  background-color: #0E273B;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  top: -1px;
+}
+.results .element a {
+  text-decoration: none;
+  color: #0E7399;
+  font-weight: bold;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=recherche.css.map */

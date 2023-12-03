@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+// Color palette
+$primary-color: #0E273B; // Assuming black for primary text
+$secondary-color: #0E7399; // Assuming grey for secondary text
+$accent-color: #ccc; // Assuming blue for links and buttons
+$border-color: #ccc; // Assuming light grey for borders
+
+.recherche-container {
+  margin-top: 20px;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+
+  .element {
+    background-color: $primary-color;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: $accent-color;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: $accent-color;
+      margin-bottom: 5px;
+      line-height: 1.4;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 8px;
+        width: 8px;
+        background-color: #0E273B;
+        border-radius: 50%;
+        margin-right: 8px;
+        position: relative;
+        top: -1px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $secondary-color;
+      font-weight: bold;
+      margin-top: 15px;
+      display: inline-block;
+    }
+  }
+}
