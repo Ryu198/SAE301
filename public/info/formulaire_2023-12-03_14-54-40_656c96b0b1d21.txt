@@ -1,0 +1,10 @@
+{
+    "assignment_type": "exercice",
+    "subject": "fefzef",
+    "title": "efzf",
+    "start_date": "2220-12-10",
+    "due_date": "2220-02-21",
+    "due_time": "20:02",
+    "description": "0202",
+    "file_paths": []
+}

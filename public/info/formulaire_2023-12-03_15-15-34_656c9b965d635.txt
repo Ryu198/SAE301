@@ -1,0 +1,10 @@
+{
+    "assignment_type": "rendu",
+    "subject": "WR211",
+    "title": "CMS",
+    "start_date": "2023-03-16",
+    "due_date": "2023-03-18",
+    "due_time": "17:00",
+    "description": "Test",
+    "file_paths": []
+}

@@ -1,0 +1,10 @@
+{
+    "assignment_type": "rendu",
+    "subject": "WR314",
+    "title": "Test",
+    "start_date": "2023-02-25",
+    "due_date": "2023-02-27",
+    "due_time": "16:00",
+    "description": "Test",
+    "file_paths": []
+}
